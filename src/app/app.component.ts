@@ -6,5 +6,19 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'carousel-slider';
+  items: Array<any> =[]
+  constructor()
+  {
+    this.items=[
+      {name: "<h3>Ahetesum</h3>" },
+      {name: "<h3>Ahetesum</h3>" },
+      {name: "<h3>Ahetesum</h3>" },
+      {name: "<h3>Ahetesum</h3>" },
+      {name: "<h3>Ahetesum</h3>" },
+      {name: "<h3>Ahetesum</h3>" },
+      {name: "<h3>Ahetesum</h3>" },
+      {name: "<h3>Ahetesum</h3>" },
+      {name: "<h3>Ahetesum</h3>" },
+    ]
+  }
 }
