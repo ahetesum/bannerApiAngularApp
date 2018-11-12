@@ -15,11 +15,10 @@
     </thead>
     <tbody>
       <tr class="table-active" *ngFor = "let item of items; let i=index">
-        
         <th scope="row">{{i+1}}</th>
         <td>{{item.CreatedDate}}</td>
         <td><div><button type="button" class="btn btn-success">Edit</button>
-          <button type="button" class="btn btn-danger">Delete</button></div></td>
+          <button type="button" (click)="deleteEmp(item)" class="btn btn-danger">Delete</button></div></td>
       </tr>
     </tbody>
   </table>

@@ -21,6 +21,15 @@ export class BannerService {
     return this.http.get<IBanner[]>(this._url);
   }
 
-  
+  deleteBanner(id: string) {  
+    return this.http.delete<IBanner>(this._url + id);  
+  }  
+  createUser(banner: IBanner) {  
+    return this.http.post(this._url, banner);  
+  }  
+
+  updateEmployee(banner: IBanner) {  
+    return this.http.put(this._url + '/' + banner.Id, banner);  
+  } 
 
 }

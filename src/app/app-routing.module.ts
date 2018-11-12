@@ -13,6 +13,10 @@ const routes: Routes = [
    path:'',
    component:SliderComponent
  },
+ {
+  path:'banner',
+  component:BannerComponent
+}
 
 ];
 
