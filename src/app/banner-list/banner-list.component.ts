@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { BannerService } from '../banner.service';
 
 @Component({
   selector: 'app-banner-list',
@@ -6,10 +7,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./banner-list.component.css']
 })
 export class BannerListComponent implements OnInit {
+  public items=[];
 
-  constructor() { }
+  constructor(private _bannerService:BannerService) { }
+
 
   ngOnInit() {
+    this._bannerService.getBanners().subscribe(data =>this.items=data);
   }
+
 
 }
